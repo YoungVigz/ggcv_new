@@ -2,7 +2,7 @@ export const navData = [
     {
         id: 1,
         title: "home",
-        href: "/"
+        href: "#home"
     },
     {
         id: 2,
