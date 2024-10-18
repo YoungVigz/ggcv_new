@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faJs, faNodeJs, faGit, faGithub, faFigma } from '@fortawesome/free-brands-svg-icons'
+import { faReact, faJs, faNodeJs, faGit, faGithub, faFigma, faSass, faCss3 } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
@@ -23,11 +23,11 @@ const About = () => {
               <span>JavaScript</span>
             </div>
             <div className="flex flex-col items-center">
-              <FontAwesomeIcon icon={faCodeBranch} className="text-4xl" />
+              <FontAwesomeIcon icon={faSass} className='text-4xl'/>
               <span>SCSS</span>
             </div>
             <div className="flex flex-col items-center">
-              <FontAwesomeIcon icon={faReact} className="text-4xl" />
+              <FontAwesomeIcon icon={faCss3} className="text-4xl" />
               <span>Tailwind CSS</span>
             </div>
           </div>

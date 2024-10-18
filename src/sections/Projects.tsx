@@ -7,37 +7,31 @@ const Projects = () => {
 
           <div className="glass-effect w-full h-80 flex flex-col items-center justify-start p-4 text-white rounded-lg">
             <img
-              src="https://via.placeholder.com/150"
+              src="/assets/p1.png"
               alt="Project 1"
               className="w-full h-36 object-cover rounded-t-lg mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Project 1</h3>
-            <p className="text-sm">Technologies: React, TailwindCSS, Node.js</p>
+            <h3 className="text-xl font-semibold mb-2">GGCV</h3>
+            <p className="text-sm">Technologies: React.js, TailwindCSS, Node.js, Three.js</p>
           </div>
 
           <div className="glass-effect w-full h-80 flex flex-col items-center justify-start p-4 text-white rounded-lg">
             <img
-              src="https://via.placeholder.com/150"
+              src="/assets/p2.png"
               alt="Project 2"
               className="w-full h-36 object-cover rounded-t-lg mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Project 2</h3>
-            <p className="text-sm">Technologies: Vue.js, Firebase, CSS Modules</p>
+            <h3 className="text-xl font-semibold mb-2">Todo Haven</h3>
+            <p className="text-sm">Technologies: React.js, Node.js, Express.js, MonogDB</p>
           </div>
   
-          <div className="glass-effect w-full h-80 flex flex-col items-center justify-start p-4 text-white rounded-lg">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Project 3"
-              className="w-full h-36 object-cover rounded-t-lg mb-4"
-            />
-            <h3 className="text-xl font-semibold mb-2">Project 3</h3>
-            <p className="text-sm">Technologies: Angular, Sass, TypeScript</p>
+          <div className="glass-effect w-full h-80 flex flex-col items-center justify-start p-4 text-white rounded-lg">  
+            <h3 className="text-xl font-semibold mb-2">TBA</h3>
           </div>
         </div>
   
         <div className="mt-8 glass-effect w-full max-w-xs h-16 flex items-center justify-center p-4 text-white rounded-lg">
-          <a href="https://github.com" className="underline">
+          <a href="https://github.com/YoungVigz" target="_blank" className="underline">
             For more, check out my GitHub
           </a>
         </div>

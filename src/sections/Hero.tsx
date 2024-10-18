@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 
 function Hero() {
   const [modelScale, setModelScale] = useState(4.5)
-  const [modelY, setModelY] = useState()
 
   useEffect(() => {
     const handleResize = () => {
