@@ -8,17 +8,23 @@ Title: Smol Ame in an Upcycled Terrarium [HololiveEn]
 
 import { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { ReactThreeFiber } from '@react-three/fiber';
+import THREE from "three"
 
-export function Model(props) {
-  const group = useRef()
+interface ModelProps extends ReactThreeFiber.Object3DNode<THREE.Group, typeof THREE.Group> {
+}
+
+export function Model(props: ModelProps) {
+  const group = useRef<THREE.Group | null>(null)
   const { nodes, materials, animations } = useGLTF('assets/3d/scene.gltf')
   const { actions } = useAnimations(animations, group)
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">
-            <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
+            <group name="GLTF_SceneRootNode" rotation={[Math.PI / 3, 0, 0]}>
               <group name="pasokon_1">
                 <mesh
                   name="Object_4"

@@ -40,7 +40,7 @@ function Hero() {
       <div className="absolute inset-0">
         <Canvas >
           <PerspectiveCamera makeDefault position={[0, 0, 30]} />
-          <Model scale={modelScale} position={[0, -8, 0]} rotation={[0.3, Math.PI * 2, 0]} />
+          <Model scale={modelScale} position={[0, -8, 0]} rotation={[0.7, Math.PI * 2, 0]} />
           <ambientLight intensity={1} />
           <directionalLight position={[10, 10, 10]} intensity={0.5} />
         </Canvas>
