@@ -6,18 +6,16 @@ Source: https://sketchfab.com/3d-models/smol-ame-in-an-upcycled-terrarium-hololi
 Title: Smol Ame in an Upcycled Terrarium [HololiveEn]
 */
 
-import { useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { Group, Mesh, SkinnedMesh } from 'three';
 import { ReactThreeFiber } from '@react-three/fiber';
-import THREE from "three"
 
-interface ModelProps extends ReactThreeFiber.Object3DNode<THREE.Group, typeof THREE.Group> {
-}
+interface ModelProps extends ReactThreeFiber.Object3DNode<Group, typeof Group> {}
 
 export function Model(props: ModelProps) {
-  const group = useRef<THREE.Group | null>(null)
-  const { nodes, materials, animations } = useGLTF('assets/3d/scene.gltf')
-  const { actions } = useAnimations(animations, group)
+  const group = useRef<Group>(null)
+  const { nodes, materials } = useGLTF('assets/3d/scene.gltf') as any
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -30,14 +28,14 @@ export function Model(props: ModelProps) {
                   name="Object_4"
                   castShadow
                   receiveShadow
-                  geometry={nodes.Object_4.geometry}
+                  geometry={(nodes.Object_4 as Mesh).geometry}
                   material={materials.pasokon}
                 />
                 <mesh
                   name="Object_5"
                   castShadow
                   receiveShadow
-                  geometry={nodes.Object_5.geometry}
+                  geometry={(nodes.Object_5 as Mesh).geometry}
                   material={materials.terrarium1}
                 />
               </group>
@@ -46,124 +44,24 @@ export function Model(props: ModelProps) {
                   <primitive object={nodes.GLTF_created_0_rootJoint} />
                   <skinnedMesh
                     name="Object_10"
-                    geometry={nodes.Object_10.geometry}
+                    geometry={(nodes.Object_10 as SkinnedMesh).geometry}
                     material={materials.terrarium1ame}
-                    skeleton={nodes.Object_10.skeleton}
+                    skeleton={(nodes.Object_10 as SkinnedMesh).skeleton}
                   />
                   <skinnedMesh
                     name="Object_12"
-                    geometry={nodes.Object_12.geometry}
+                    geometry={(nodes.Object_12 as SkinnedMesh).geometry}
                     material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_12.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_14"
-                    geometry={nodes.Object_14.geometry}
-                    material={materials.terrarium1ame}
-                    skeleton={nodes.Object_14.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_16"
-                    geometry={nodes.Object_16.geometry}
-                    material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_16.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_18"
-                    geometry={nodes.Object_18.geometry}
-                    material={materials.terrarium1ame}
-                    skeleton={nodes.Object_18.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_19"
-                    geometry={nodes.Object_19.geometry}
-                    material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_19.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_21"
-                    geometry={nodes.Object_21.geometry}
-                    material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_21.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_23"
-                    geometry={nodes.Object_23.geometry}
-                    material={materials.terrarium1ame}
-                    skeleton={nodes.Object_23.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_25"
-                    geometry={nodes.Object_25.geometry}
-                    material={materials.terrarium1ame}
-                    skeleton={nodes.Object_25.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_27"
-                    geometry={nodes.Object_27.geometry}
-                    material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_27.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_29"
-                    geometry={nodes.Object_29.geometry}
-                    material={materials.terrarium1ame}
-                    skeleton={nodes.Object_29.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_31"
-                    geometry={nodes.Object_31.geometry}
-                    material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_31.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_33"
-                    geometry={nodes.Object_33.geometry}
-                    material={materials.terrarium1ame}
-                    skeleton={nodes.Object_33.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_35"
-                    geometry={nodes.Object_35.geometry}
-                    material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_35.skeleton}
+                    skeleton={(nodes.Object_12 as SkinnedMesh).skeleton}
                   />
                   <skinnedMesh
                     name="Object_37"
-                    geometry={nodes.Object_37.geometry}
+                    geometry={(nodes.Object_37 as SkinnedMesh).geometry}
                     material={materials.terrarium1ame}
-                    skeleton={nodes.Object_37.skeleton}
-                    morphTargetDictionary={nodes.Object_37.morphTargetDictionary}
-                    morphTargetInfluences={nodes.Object_37.morphTargetInfluences}
+                    skeleton={(nodes.Object_37 as SkinnedMesh).skeleton}
+                    morphTargetDictionary={(nodes.Object_37 as SkinnedMesh).morphTargetDictionary}
+                    morphTargetInfluences={(nodes.Object_37 as SkinnedMesh).morphTargetInfluences}
                   />
-                  <skinnedMesh
-                    name="Object_39"
-                    geometry={nodes.Object_39.geometry}
-                    material={materials.terrarium1ame}
-                    skeleton={nodes.Object_39.skeleton}
-                  />
-                  <skinnedMesh
-                    name="Object_41"
-                    geometry={nodes.Object_41.geometry}
-                    material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_41.skeleton}
-                  />
-                  <group name="armies_21" />
-                  <group name="armies001_22" />
-                  <group name="bode_23" />
-                  <group name="bode001_24" />
-                  <group name="Cylinder003_25" />
-                  <group name="Cylinder004_26" />
-                  <group name="eyea_27" />
-                  <group name="feets_28" />
-                  <group name="feets001_29" />
-                  <group name="guitar_30" />
-                  <group name="guitar001_31" />
-                  <group name="hair_32" />
-                  <group name="hairoutline_33" />
-                  <group name="mouf_34" />
-                  <group name="nogging_35" />
-                  <group name="nogging001_36" />
                 </group>
               </group>
               <group
@@ -175,18 +73,16 @@ export function Model(props: ModelProps) {
                   <primitive object={nodes.GLTF_created_1_rootJoint} />
                   <skinnedMesh
                     name="Object_65"
-                    geometry={nodes.Object_65.geometry}
+                    geometry={(nodes.Object_65 as SkinnedMesh).geometry}
                     material={materials.terrarium1}
-                    skeleton={nodes.Object_65.skeleton}
+                    skeleton={(nodes.Object_65 as SkinnedMesh).skeleton}
                   />
                   <skinnedMesh
                     name="Object_67"
-                    geometry={nodes.Object_67.geometry}
+                    geometry={(nodes.Object_67 as SkinnedMesh).geometry}
                     material={materials.terrarium1ameoutline}
-                    skeleton={nodes.Object_67.skeleton}
+                    skeleton={(nodes.Object_67 as SkinnedMesh).skeleton}
                   />
-                  <group name="isopod_47" />
-                  <group name="isopod001_48" />
                 </group>
               </group>
             </group>
@@ -194,7 +90,7 @@ export function Model(props: ModelProps) {
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('assets/3d/scene.gltf')
+useGLTF.preload('assets/3d/scene.gltf');
